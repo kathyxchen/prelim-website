@@ -9,7 +9,7 @@
   <div id="buffer">
   </div>
 <?php
-  $mysqli = new mysqli("127.0.0.1", "root", "", "kathy_blog");
+  $mysqli = new mysqli("127.0.0.1", "root", "test54321", "kathy_blog");
   if ($mysqli->connect_errno) {
     echo "Failed";
   }
