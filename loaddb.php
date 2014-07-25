@@ -11,14 +11,18 @@
     $one->body = $body;
     return $one;
   }
+  /*
   $articles[] = artic_create('Cats', 'Fish', 'fish@mail.com', 'Very good. If I added a lot of lines here, what would happen? Does it go on forever? I really do not like fish it is so much work to eat.');
   $articles[] = artic_create('Title', 'Author', 'author@mail.com', 'Content here.');
   $articles[] = artic_create('Cake', 'Baker', '', 'Frosting. So much frosting.');
-  
+  */
+  $articles[] = artic_create('Going on', 'First Last', 'first@mail.com', 'Mark territory give attitude streeeeetch shake same spot. Hide when guests come. All of sudden cat goes crazy destroys iPod screen chew iPad power cord. Missing until dinner. Destroy couch claw draps flop over.');
+  $articles[] = artic_create('Last', 'Tired Names', 'tired@mail.com', 'Food is great. Test text all around here.');  
   $mysqli = new mysqli("127.0.0.1", "root", "", "kathy_blog");
   if ($mysqli->connect_errno) {
     echo "Failed";
   }
+  /*
   $create = "CREATE TABLE authors (ID int(11) AUTO_INCREMENT, name varchar(255), email varchar(255), PRIMARY KEY (ID))";
   $drop = "ALTER TABLE articles DROP COLUMN author";
   $add = "ALTER TABLE articles ADD COLUMN author_id int(11)";
@@ -31,6 +35,7 @@
       echo "Failed";
     }
   }
+  */
   // THESE TWO FUNCTIONS CAN BE GENERALIZED LATER. 
   function insert_auth($author, $email, $mysqli) {
     $query = "INSERT INTO authors (name, email) VALUES (?, ?)";

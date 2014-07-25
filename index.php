@@ -47,12 +47,12 @@
           $stmt->bind_result($a, $b, $c, $d);
           while ($stmt->fetch()) {
             $author_info = get_author($mysqli, $b);
-            echo '<table id="' .$d .'" class="entry" style="width:300px"><tr><td class="title">';
+            echo '<article id="' .$d .'" class="entry"><span class="title">';
             echo '<h2><a href="article.php?id=' . $d . '">';
-            echo $a . '</a></h2></td></tr><tr><td class="author">';
+            echo $a . '</a></h2></span><span class="author">';
             echo $author_info['name'];
-            echo '</td></tr><tr><td class="body">' . $c;
-            echo '</td></tr></table><br />'; 
+            echo '</span><br /><span class="body">' . $c;
+            echo '</span></article>'; 
           }
           $stmt->free_result();
           $stmt->close();
