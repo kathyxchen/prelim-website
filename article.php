@@ -1,5 +1,14 @@
+<html> 
+<head>
+<link rel="stylesheet" href="article.css"/>
+</head>
+<body>
+  <div class="side">
+    <img src="cropped.jpg" class="sidebar" />
+  </div>
+  <div id="buffer">
+  </div>
 <?php
-  
   $mysqli = new mysqli("127.0.0.1", "root", "", "kathy_blog");
   if ($mysqli->connect_errno) {
     echo "Failed";
@@ -28,10 +37,10 @@
       $stmt->bind_result($a, $b, $c);
       $stmt->fetch();
       $auth_info = get_author($mysqli, $b);
-      echo '<div class="post"><table style="width:300px"><tr><td class="title">';
-      echo '<h2>' . $a . '</h2></td></tr><tr><td class="author">';
+      echo '<div class="post"><span class="title">';
+      echo '<h2>' . $a . '</h2></span><span class="author">';
       echo $auth_info['name'];
-      echo '</td></tr><tr><td class="body">' . $c . '</td></tr></table></div>';
+      echo '</span><br /><span class="body">' . $c . '</span><br /></div>';
       $stmt->close();
    }
   }
@@ -45,3 +54,5 @@
     }
   }
 ?>
+</body>
+</html>

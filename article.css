@@ -1,0 +1,38 @@
+body {
+  background-color: white;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+.side {
+  float: left;
+}
+
+#buffer {
+  float: right;
+} 
+
+.post {
+  margin-left: 50px;
+  float: left;
+  background-color: white;
+  width: 700px;
+  
+}
+
+
+.author {
+  color: gray;
+  font-style: italic;
+  font-size: 70%;
+}
+
+.body {
+  font-size: 90%;
+}
+
+

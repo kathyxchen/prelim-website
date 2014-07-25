@@ -5,13 +5,20 @@
 </head>
 <body>
   <div id="container">
-    <div id="overlay"></div>
+    <div id="top">
+    <div id="overlay">
+      <img class="bg" alt="" src="city.jpg" />
+    </div>
     <div id="about">    
       <h2> Presently </h2>
       <?php 
         echo date('l, F d, Y') . '<br /></div>';
       ?>
     </div>
+    </div>
+    <div id="transition">
+    </div>
+    <br />
     <div id="posts-container" class="top">    
     <?php
       $mysqli = new mysqli("127.0.0.1", "root", "", "kathy_blog");
@@ -40,14 +47,12 @@
           $stmt->bind_result($a, $b, $c, $d);
           while ($stmt->fetch()) {
             $author_info = get_author($mysqli, $b);
-            echo '<article id="' . $d .'" class="entry">';
-            echo '<table style="width:300px"><tr><td class="title">';
+            echo '<table id="' .$d .'" class="entry" style="width:300px"><tr><td class="title">';
             echo '<h2><a href="article.php?id=' . $d . '">';
             echo $a . '</a></h2></td></tr><tr><td class="author">';
             echo $author_info['name'];
             echo '</td></tr><tr><td class="body">' . $c;
             echo '</td></tr></table><br />'; 
-            echo '</article>';
           }
           $stmt->free_result();
           $stmt->close();
