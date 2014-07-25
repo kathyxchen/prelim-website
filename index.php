@@ -5,6 +5,17 @@
 </head>
 <body>
   <div id="container">
+    <div id="menu"> 
+        <?php
+            $menu = array(
+            'HOME'=>'', 
+            'SUBMISSION'=>'submit',
+            "AUTHOR'S INDEX"=>'authind');
+            foreach ($menu as $tab => $link) {
+                echo '<div class="tab">' . $tab . '</div>';
+            }
+        ?>
+    </div>
     <div id="top">
     <div id="overlay">
       <img class="bg" alt="" src="city.jpg" />

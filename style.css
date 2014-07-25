@@ -1,6 +1,16 @@
 body {
   background-color: #A2A9AF;
+  padding: 0;
+  margin: 0;
 }
+
+.tab {
+    float: left;
+    padding: 15px;
+    color: #E7E4E4;
+}
+
+
 h2 {
   font-family: 'Georgia';
   font-weight: normal;
@@ -31,14 +41,16 @@ h2, .author, .body {
 
 #about {
   position: absolute; 
-  margin: auto;
-  top: 110px;
-  left: 300px;
+  margin: 0 auto;
+  top: 70%;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   font-family: 'Courier New';
   font-weight: bold;
-  color: gray;
+  color: #E7E4E4;
   font-size: 200%;
-  z-index: 2;
+  z-index: 3;
 }
 
 #transition {
@@ -55,8 +67,8 @@ h2, .author, .body {
   margin-bottom: 10px;
   float: left;
   background-color: white;
-  width: 300px;
-  height: 300px;
+  width: 304px;
+  height: 304px;
 }
 
 .author {
