@@ -1,12 +1,16 @@
 body {
-  background-color: gray;
+  background-color: #A2A9AF;
 }
 h2 {
-  margin-bottom: 0;
+  font-family: 'Georgia';
   font-weight: normal;
-  font-size: 100%;
+  font-size: 120%;
 }
 
+h2, .author, .body {
+   padding: 5px;
+   margin-bottom: 5px;
+}
 #top {
   position: relative;
 }
@@ -39,12 +43,10 @@ h2 {
 
 #transition {
   position: relative;
-
 }
 
 #posts-container {
   position: relative;
-  font-family: 'Georgia';
   z-index: 2;
 }
 
@@ -61,23 +63,21 @@ h2 {
   color: gray;
   font-style: italic;
   font-size: 70%;
+  font-family: 'Georgia';
 }
 
 .body {
-  font-size: 90%;
+  font-family: 'Trebuchet MS';
+  font-size: 80%;
 }
 
 a {
   position: relative;
   z-index: 2;
 }
-a:link {
-  color: #6699CC;
-  text-decoration: none;
-}
 
-a:visited {
-  color: #6666CC;
+a:link, a:visited {
+  color: #6699CC;
   text-decoration: none;
 }
 

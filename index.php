@@ -46,13 +46,16 @@
           $stmt->store_result();
           $stmt->bind_result($a, $b, $c, $d);
           while ($stmt->fetch()) {
+            if (strlen($c) > 650) {
+                $c = substr($c,0,650) . ' ...';
+            }
             $author_info = get_author($mysqli, $b);
             echo '<article id="' .$d .'" class="entry"><span class="title">';
             echo '<h2><a href="article.php?id=' . $d . '">';
             echo $a . '</a></h2></span><span class="author">';
             echo $author_info['name'];
-            echo '</span><br /><span class="body">' . $c;
-            echo '</span></article>'; 
+            echo '</span><br /><div class="body">' . $c;
+            echo '</div></article>'; 
           }
           $stmt->free_result();
           $stmt->close();

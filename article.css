@@ -3,9 +3,9 @@ body {
 }
 
 h2 {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-weight: normal;
-  font-size: 100%;
+  font-size: 140%;
 }
 
 .side {
@@ -17,6 +17,7 @@ h2 {
 } 
 
 .post {
+  padding: 10px;
   margin-left: 50px;
   float: left;
   background-color: white;
@@ -24,15 +25,17 @@ h2 {
   
 }
 
+.author, .body {
+  font-size: 100%;
+  margin-bottom: 5px;
+}
 
 .author {
   color: gray;
   font-style: italic;
-  font-size: 70%;
 }
 
 .body {
-  font-size: 90%;
 }
 
 

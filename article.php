@@ -37,10 +37,10 @@
       $stmt->bind_result($a, $b, $c);
       $stmt->fetch();
       $auth_info = get_author($mysqli, $b);
-      echo '<div class="post"><span class="title">';
-      echo '<h2>' . $a . '</h2></span><span class="author">';
+      echo '<div class="post"><div class="title">';
+      echo '<h2>' . $a . '</h2></div><div class="author">';
       echo $auth_info['name'];
-      echo '</span><br /><span class="body">' . $c . '</span><br /></div>';
+      echo '</div><div class="body">' . $c . '</div><br /></div>';
       $stmt->close();
    }
   }
