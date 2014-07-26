@@ -9,7 +9,7 @@
         $menu = array(
             'HOME'=>'../', 
             'SUBMISSION'=>'submit',
-            "AUTHOR'S INDEX"=>'authind');
+            "AUTHOR'S INDEX"=>'../authind');
             foreach ($menu as $tab => $link) {
                 echo '<div class="tab">';
                 echo '<a href="' . $link . '">' . $tab . '</a></div>';

@@ -80,13 +80,28 @@ h2, .author, .body {
 }
 
 .entry {
-  margin: 10px;
   overflow: hidden;
   display: inline-block;
   text-align:justify;
   background-color: white;
   width: 270px;
-  height: 270px;
+  height: 250px;
+}
+
+.whole {
+    display: inline-block;
+    background-color: white;
+    margin: 10px 10px 0px 10px;
+}
+
+form {
+    margin-left: 200px;
+    margin-bottom: 5px;
+}
+
+input[type="submit"] {
+    border: 1px outset #6699CC;
+    color: #6699CC;
 }
 
 #posts-container:after {
@@ -94,6 +109,7 @@ h2, .author, .body {
   width: 100%;
   display: inline-block;
 }
+
 .author {
   color: gray;
   font-style: italic;

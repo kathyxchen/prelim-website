@@ -4,6 +4,7 @@
   <title>read me.</title>
 </head>
 <body>
+  <?php include 'delete.php'; ?>
   <div id="container">
     <div id="menu"> 
         <?php
@@ -62,12 +63,14 @@
                 $c = substr($c,0,500) . ' ...';
             }
             $author_info = get_author($mysqli, $b);
-            echo '<article id="' .$d .'" class="entry"><span class="title">';
+            echo '<div class="whole"><article id="' .$d .'" class="entry"><span class="title">';
             echo '<h2><a href="article.php?id=' . $d . '">';
             echo $a . '</a></h2></span><span class="author">';
             echo $author_info['name'];
             echo '</span><br /><div class="body">' . $c;
             echo '</div></article>'; 
+            echo '<form action="" method=""><input type="submit" value="Delete" />';
+            echo '</form></div>';
           }
           $stmt->free_result();
           $stmt->close();
