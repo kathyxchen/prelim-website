@@ -23,7 +23,7 @@
     <div id="about">    
       <h2> Presently </h2>
       <?php 
-        echo date('l, F d, Y') . '<br /></div>';
+        echo date('l, F d, Y') . '<br />';
       ?>
     </div>
     </div>
@@ -57,8 +57,8 @@
           $stmt->store_result();
           $stmt->bind_result($a, $b, $c, $d);
           while ($stmt->fetch()) {
-            if (strlen($c) > 650) {
-                $c = substr($c,0,650) . ' ...';
+            if (strlen($c) > 500) {
+                $c = substr($c,0,500) . ' ...';
             }
             $author_info = get_author($mysqli, $b);
             echo '<article id="' .$d .'" class="entry"><span class="title">';
