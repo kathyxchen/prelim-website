@@ -1,16 +1,10 @@
+
 body {
   background-color: white;
   height: 100%; 
-  width: 100%;
   margin: 0 auto;
 }
 
-h2 {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-weight: normal;
-  font-size: 120%;
-}
 
 .side {
   float: left;
@@ -21,34 +15,29 @@ h2 {
 }
 
 #buffer {
-  float: right;
+  float: left;
+  padding: 20px;
 } 
 
-.post {
-  padding: 25px;
-  margin-left: 50px;
-  margin-top: 60px;
-  float: left;
-  background-color: white;
-  width: 50%;
-  overflow: hidden; 
+form {
+  margin-top: 30px;
+  padding: 10px;
 }
 
-.author, .body {
-  margin-bottom: 5px;
-}
-
-.author {
-  color: gray;
-  font-style: italic;
-  font-size: 90%
-}
-
-.body {
+body {
   font-family: "Trebuchet MS";
   font-size: 80%;
+  font-weight: bold;
 }
 
+#entry {
+  float: left;
+}
+
+#post { 
+  margin-top: 60px;
+  padding-top: 20px;
+}
 
 #menu {
     position: fixed;
@@ -60,6 +49,9 @@ h2 {
 }
 
 .tab {
+    font-family: "Georgia";
+    font-weight: normal;
+    font-size: 120%;
     float: left;
     padding: 15px;
     color: #E7E4E4;

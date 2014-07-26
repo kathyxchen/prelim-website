@@ -3,6 +3,19 @@
 <link rel="stylesheet" href="article.css"/>
 </head>
 <body>
+  
+  <div id="menu"> 
+    <?php
+        $menu = array(
+            'HOME'=>'../kc', 
+            'SUBMISSION'=>'submit',
+            "AUTHOR'S INDEX"=>'authind');
+            foreach ($menu as $tab => $link) {
+                echo '<div class="tab">';
+                echo '<a href="' . $link . '">' . $tab . '</a></div>';
+            }
+        ?>
+  </div>
   <div class="side">
     <img src="cropped.jpg" class="sidebar" />
   </div>

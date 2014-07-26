@@ -12,7 +12,8 @@
             'SUBMISSION'=>'submit',
             "AUTHOR'S INDEX"=>'authind');
             foreach ($menu as $tab => $link) {
-                echo '<div class="tab">' . $tab . '</div>';
+                echo '<div class="tab">';
+                echo '<a href="' . $link . '">' . $tab . '</a></div>';
             }
         ?>
     </div>
