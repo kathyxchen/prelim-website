@@ -44,23 +44,29 @@
     }
     return $author_info;
   }
+  function convertTime($d) {
+    $ts = strtotime($d);
+    return date("F d, Y", $ts);
+  }
+
   function get_db($mysqli, $str_params, $which) {
     $query = "SELECT " . $str_params . " FROM articles WHERE ID=" . $which;
     if ($stmt = $mysqli->prepare($query)) {
       $stmt->execute();
       $stmt->store_result();  
-      $stmt->bind_result($a, $b, $c);
+      $stmt->bind_result($a, $b, $c, $d);
       $stmt->fetch();
       $auth_info = get_author($mysqli, $b);
       echo '<div class="post"><div class="title">';
       echo '<h2>' . $a . '</h2></div><div class="author">';
       echo check($auth_info['email'], $auth_info['name']);
-      echo '</div><div class="body">' . $c . '</div><br /></div>';
+      echo '</div><div class="body">' . $c . '</div>';
+      echo '<span class="tm">(submitted ' . convertTime($d) . '.)</span></div>';
       $stmt->close();
    }
   }
 
-  $fields = 'title, author_id, body';
+  $fields = 'title, author_id, body, post_time';
 
   if (!empty($_GET)) {
     $id=$_GET['id'];

@@ -60,12 +60,17 @@
           mysqli_query($mysqli, $query);
         }
       }
+
+      function convertTime($d) {
+        $ts = strtotime($d);
+        return date("F d, Y", $ts);
+      }
       function get_db($mysqli) {
-        $query = "SELECT title, author_id, body, ID FROM articles ORDER BY ID DESC";
+        $query = "SELECT title, author_id, body, ID, post_time FROM articles ORDER BY ID DESC";
         if ($stmt = $mysqli->prepare($query)) {
           $stmt->execute();
           $stmt->store_result();
-          $stmt->bind_result($a, $b, $c, $d);
+          $stmt->bind_result($a, $b, $c, $d, $e);
           while ($stmt->fetch()) {
             if (strlen($c) > 500) {
                 $c = substr($c,0,500) . ' ...';
@@ -76,9 +81,11 @@
             echo $a . '</a></h2></span><span class="author">';
             echo check($author_info['email'], $author_info['name']);
             echo '</span><br /><div class="body">' . $c;
-            echo '</div></article>'; 
+            echo '</div></article>';
+            echo '<div class="bttab">';
+            echo '<span class="tm">(' . convertTime($e) . ')</span>';
             echo '<a class="del" href="/kc/?delete=' . $d . '"> delete <a/>';
-            echo '</form></div>';
+            echo '</div></div>';
           }
           $stmt->free_result();
           $stmt->close();

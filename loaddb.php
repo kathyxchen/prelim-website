@@ -33,17 +33,17 @@ Missing until dinner time chase imaginary bugs yet throwup on your pillow, sweet
   if ($mysqli->connect_errno) {
     echo "Failed";
   }
-  /*
-  $create = "CREATE TABLE authors (ID int(11) AUTO_INCREMENT, name varchar(255), email varchar(255), PRIMARY KEY (ID))";
-  $mysqli = new mysqli($host, $username, $password, $database);
-  if ($mysqli->connect_errno) {
-    echo "Failed";
-  }
+
+/*  $create = "CREATE TABLE authors (ID int(11) AUTO_INCREMENT, name varchar(255), email varchar(255), PRIMARY KEY (ID))";
+  */
   /*
   $create = "CREATE TABLE authors (ID int(11) AUTO_INCREMENT, name varchar(255), email varchar(255), PRIMARY KEY (ID))";
   $drop = "ALTER TABLE articles DROP COLUMN author";
-  $add = "ALTER TABLE articles ADD COLUMN author_id int(11)";
-  $cmds = array($create, $drop, $add);
+  $addauth = "ALTER TABLE articles ADD COLUMN author_id int(11)";
+  */
+  $addtime = "ALTER TABLE articles ADD COLUMN post_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP";
+  //$cmds = array($create, $drop, $addauth, $addtime);
+  $cmds = array($addtime);
   foreach ($cmds as $cmd) {
     if (mysqli_query($mysqli,$cmd)) {
       echo "Successful";
@@ -52,7 +52,6 @@ Missing until dinner time chase imaginary bugs yet throwup on your pillow, sweet
       echo "Failed";
     }
   }
-  */
   // THESE TWO FUNCTIONS CAN BE GENERALIZED LATER. 
   function insert_auth($author, $email, $mysqli) {
     $query = "INSERT INTO authors (name, email) VALUES (?, ?)";

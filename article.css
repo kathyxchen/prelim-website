@@ -66,6 +66,13 @@ h2 {
     color: #E7E4E4;
 }
 
+.tm {
+  font-family: "Georgia";
+  font-size: 70%;
+  color: gray;
+  font-style: italic;
+}
+
 a {
   position: relative;
   z-index: 2;
