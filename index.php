@@ -4,7 +4,6 @@
   <title>read me.</title>
 </head>
 <body>
-  <?php include 'delete.php'; ?>
   <div id="container">
     <div id="menu"> 
         <?php
@@ -35,11 +34,12 @@
     <div id="posts-container" class="top">    
     <?php
       include("dbinfo.inc.php");
+      include ("email.php");
       $mysqli = new mysqli($host, $username, $password, $database);
       if ($mysqli->connect_errno) {
         echo "Failed";
       }
-      // maybe implement infinite scrolling later
+
       function get_author($mysqli, $id) {
         $author_info = array();
         $query = "SELECT name, email FROM authors WHERE ID=" . $id;
@@ -74,7 +74,7 @@
             echo '<div class="whole"><article id="' .$d .'" class="entry"><span class="title">';
             echo '<h2><a href="article.php?id=' . $d . '">';
             echo $a . '</a></h2></span><span class="author">';
-            echo $author_info['name'];
+            echo check($author_info['email'], $author_info['name']);
             echo '</span><br /><div class="body">' . $c;
             echo '</div></article>'; 
             echo '<a class="del" href="/kc/?delete=' . $d . '"> delete <a/>';
