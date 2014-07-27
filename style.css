@@ -139,17 +139,22 @@ a.mlink:link, a.mlink:visited {
   font-size: 70%;
   color: gray;
   font-style: italic;
+  margin-left: 10px;
+  float: left;
 }
+
 
 .del {
   font-size: 80%;
   font-style: italic;
-  left: 5px;
+  right: 5px;
+  float: right;
 }
 
 .bttab {
   position: relative;
-  left: 40%;
   bottom: 10px;
-  width: 180px;
+  overflow: hidden;
+  text-align: center;
 }
+

@@ -83,7 +83,7 @@
             echo '</span><br /><div class="body">' . $c;
             echo '</div></article>';
             echo '<div class="bttab">';
-            echo '<span class="tm">(' . convertTime($e) . ')</span>';
+            echo '<div class="tm">(' . convertTime($e) . ')</div>';
             echo '<a class="del" href="/kc/?delete=' . $d . '"> delete <a/>';
             echo '</div></div>';
           }
