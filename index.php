@@ -34,7 +34,8 @@
     <br />
     <div id="posts-container" class="top">    
     <?php
-      $mysqli = new mysqli("127.0.0.1", "root", "test54321", "kathy_blog");
+      include("dbinfo.inc.php");
+      $mysqli = new mysqli($host, $username, $password, $database);
       if ($mysqli->connect_errno) {
         echo "Failed";
       }

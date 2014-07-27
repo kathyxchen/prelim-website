@@ -28,7 +28,14 @@ Missing until dinner time chase imaginary bugs yet throwup on your pillow, sweet
   $articles[] = artic_create('Long Talks', 'Your Name', 'name@mail.com',
   $longtxt);
 
-  $mysqli = new mysqli("127.0.0.1", "root", "test54321", "kathy_blog");
+  include("dbinfo.inc.php");
+  $mysqli = new mysqli($host, $username, $password, $database);
+  if ($mysqli->connect_errno) {
+    echo "Failed";
+  }
+  /*
+  $create = "CREATE TABLE authors (ID int(11) AUTO_INCREMENT, name varchar(255), email varchar(255), PRIMARY KEY (ID))";
+  $mysqli = new mysqli($host, $username, $password, $database);
   if ($mysqli->connect_errno) {
     echo "Failed";
   }
