@@ -8,7 +8,7 @@
       <?php
         $menu = array(
             'HOME'=>'../', 
-            'SUBMISSION'=>'submit',
+            'SUBMISSION'=>'',
             "AUTHOR'S INDEX"=>'../authind');
             foreach ($menu as $tab => $link) {
                 echo '<div class="tab">';
