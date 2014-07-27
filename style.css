@@ -85,24 +85,15 @@ h2, .author, .body {
   text-align:justify;
   background-color: white;
   width: 270px;
-  height: 250px;
+  height: 260px;
 }
 
 .whole {
     display: inline-block;
     background-color: white;
-    margin: 10px 10px 0px 10px;
+    margin: 10px 5px 0px 5px;
 }
 
-form {
-    margin-left: 200px;
-    margin-bottom: 5px;
-}
-
-input[type="submit"] {
-    border: 1px outset #6699CC;
-    color: #6699CC;
-}
 
 #posts-container:after {
   content: '';
@@ -132,7 +123,14 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+a:hover {
+  color: gray;
+  text-decoration: none;
+}
 
-
-
-
+.del {
+  font-size: 80%;
+  font-style: italic;
+  bottom: 5px;
+  right: 5px;
+}

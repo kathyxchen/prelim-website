@@ -52,6 +52,13 @@
         }
         return $author_info;
       }
+      
+      if (!empty($_GET)) {
+        if (isset($_GET['delete'])) {         
+          $query = "DELETE FROM articles WHERE ID=" . $_GET['delete'];
+          mysqli_query($mysqli, $query);
+        }
+      }
       function get_db($mysqli) {
         $query = "SELECT title, author_id, body, ID FROM articles ORDER BY ID DESC";
         if ($stmt = $mysqli->prepare($query)) {
@@ -69,7 +76,7 @@
             echo $author_info['name'];
             echo '</span><br /><div class="body">' . $c;
             echo '</div></article>'; 
-            echo '<form action="" method=""><input type="submit" value="Delete" />';
+            echo '<a class="del" href="/kc/?delete=' . $d . '"> delete <a/>';
             echo '</form></div>';
           }
           $stmt->free_result();
