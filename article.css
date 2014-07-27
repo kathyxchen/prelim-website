@@ -10,6 +10,7 @@ h2 {
   margin-bottom: 10px;
   font-weight: normal;
   font-size: 120%;
+  color: #6699CC;
 }
 
 .side {
@@ -68,9 +69,13 @@ h2 {
 a {
   position: relative;
   z-index: 2;
+  text-decoration: none;
 }
 
 a:link, a:visited {
   color: #6699CC;
-  text-decoration: none;
+}
+
+a.mlink:link, a.mlink:visited {
+  color: gray;
 }

@@ -1,7 +1,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css"/>
-  <title>read me.</title>
+  <title>groundwork.</title>
 </head>
 <body>
   <div id="container">
@@ -72,7 +72,7 @@
             }
             $author_info = get_author($mysqli, $b);
             echo '<div class="whole"><article id="' .$d .'" class="entry"><span class="title">';
-            echo '<h2><a href="article.php?id=' . $d . '">';
+            echo '<h2><a class="idlink" href="article.php?id=' . $d . '">';
             echo $a . '</a></h2></span><span class="author">';
             echo check($author_info['email'], $author_info['name']);
             echo '</span><br /><div class="body">' . $c;

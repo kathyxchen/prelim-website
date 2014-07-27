@@ -23,6 +23,7 @@
   </div>
 <?php
   include("dbinfo.inc.php");
+  include("email.php");
   $mysqli = new mysqli($host, $username, $password, $database);
   if ($mysqli->connect_errno) {
     echo "Failed";
@@ -53,7 +54,7 @@
       $auth_info = get_author($mysqli, $b);
       echo '<div class="post"><div class="title">';
       echo '<h2>' . $a . '</h2></div><div class="author">';
-      echo $auth_info['name'];
+      echo check($auth_info['email'], $auth_info['name']);
       echo '</div><div class="body">' . $c . '</div><br /></div>';
       $stmt->close();
    }

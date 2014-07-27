@@ -116,16 +116,21 @@ h2, .author, .body {
 a {
   position: relative;
   z-index: 2;
-}
-
-a:link, a:visited {
+  text-decoration: none;
   color: #6699CC;
+}
+
+a.idlink:link, a.idlink:visited {
+  color: #6699CC;
+}
+
+a:hover, a.idlink:hover, a.mlink:hover {
+  color: #C3E4ED;
   text-decoration: none;
 }
 
-a:hover {
+a.mlink:link, a.mlink:visited {
   color: gray;
-  text-decoration: none;
 }
 
 .del {

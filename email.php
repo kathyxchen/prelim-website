@@ -4,7 +4,7 @@
 			return $a;
 		}
 		else {
-			return '<a href="mailto:' . $n .'">' . $a . '</a>';
+			return '<a class="mlink" href="mailto:' . $n .'">' . $a . '</a>';
 		}
 	}
 ?>
