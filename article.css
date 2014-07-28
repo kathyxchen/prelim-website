@@ -1,8 +1,5 @@
 body {
-  background-color: white;
-  height: 100%; 
   width: 100%;
-  margin: 0 auto;
 }
 
 h2 {
@@ -50,33 +47,11 @@ h2 {
   font-size: 80%;
 }
 
-
-#menu {
-    position: fixed;
-    top: 0; 
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    background-color: #A2A9AF;
-}
-
-.tab {
-    float: left;
-    padding: 15px;
-    color: #E7E4E4;
-}
-
 .tm {
   font-family: "Georgia";
   font-size: 70%;
   color: gray;
   font-style: italic;
-}
-
-a {
-  position: relative;
-  z-index: 2;
-  text-decoration: none;
 }
 
 a:link, a:visited {

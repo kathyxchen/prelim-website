@@ -1,24 +1,7 @@
 body {
-  background-color: #A2A9AF;
+  background-color: #A2A9AF !important;
   padding: 0;
-  margin: 0 auto;
   width: 100%;
-  overflow-x: hidden;
-}
-
-#menu {
-    position: fixed;
-    top: 0; 
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    background-color: #A2A9AF;
-}
-
-.tab {
-    float: left;
-    padding: 15px;
-    color: #E7E4E4;
 }
 
 
@@ -112,13 +95,6 @@ h2, .author, .body {
 .body {
   font-family: 'Trebuchet MS';
   font-size: 80%;
-}
-
-a {
-  position: relative;
-  z-index: 2;
-  text-decoration: none;
-  color: #6699CC;
 }
 
 a.idlink:link, a.idlink:visited {

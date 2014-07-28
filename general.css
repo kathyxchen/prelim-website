@@ -1,0 +1,28 @@
+body {
+  background-color: white;
+  height: 100%; 
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+#menu {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: #A2A9AF;
+}
+
+.tab {
+    float: left;
+    padding: 15px;
+    color: #E7E4E4;
+}
+
+a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  color: #6699CC;
+}

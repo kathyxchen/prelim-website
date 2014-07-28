@@ -1,6 +1,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="general.css"/>
   <title>groundwork.</title>
 </head>
 <body>
@@ -35,24 +36,12 @@
     <?php
       include("dbinfo.inc.php");
       include ("email.php");
+      include("author.php");
       $mysqli = new mysqli($host, $username, $password, $database);
       if ($mysqli->connect_errno) {
         echo "Failed";
       }
 
-      function get_author($mysqli, $id) {
-        $author_info = array();
-        $query = "SELECT name, email FROM authors WHERE ID=" . $id;
-        if ($stmt = $mysqli->prepare($query)) {
-          $stmt->execute();
-          $stmt->store_result();
-          $stmt->bind_result($n, $e);
-          $stmt->fetch();
-          $author_info['name'] = $n;
-          $author_info['email'] = $e;
-        }
-        return $author_info;
-      }
       
       if (!empty($_GET)) {
         if (isset($_GET['delete'])) {         

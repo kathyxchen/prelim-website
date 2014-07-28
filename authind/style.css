@@ -1,8 +1,5 @@
-body {
-  background-color: white;
-  height: 100%; 
+body { 
   width: 100%;
-  margin: 0 auto;
 }
 
 h2 {
@@ -41,34 +38,12 @@ ul {
   float: right;
 } 
 
-#menu {
-    position: fixed;
-    top: 0; 
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    background-color: #A2A9AF;
-}
-
-.tab {
-    float: left;
-    padding: 15px;
-    color: #E7E4E4;
-}
-
 .auth {
   margin-left: 50px;
   float: left;
   background-color: white;
   width: 50%;
   overflow: hidden; 
-}
-
-
-a {
-  position: relative;
-  z-index: 2;
-  text-decoration: none;
 }
 
 a:link, a:visited {
