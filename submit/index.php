@@ -11,10 +11,10 @@
             'HOME'=>'../', 
             "POSTS"=>'../#posts-container',
             'SUBMISSION'=>'',
-            "AUTHOR'S INDEX"=>'../authind');
+            "AUTHOR INDEX"=>'../authind');
             foreach ($menu as $tab => $link) {
-                echo '<div class="tab">';
-                echo '<a href="' . $link . '">' . $tab . '</a></div>';
+                echo '<span class="tab">';
+                echo '<a href="' . $link . '">' . $tab . '</a></span>';
             }
       ?>
     </div>

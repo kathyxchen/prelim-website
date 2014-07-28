@@ -11,17 +11,16 @@
             'HOME'=>'../kc', 
             "POSTS"=>'../kc/#posts-container',
             'SUBMISSION'=>'submit',
-            "AUTHOR'S INDEX"=>'authind');
+            "AUTHOR INDEX"=>'authind');
             foreach ($menu as $tab => $link) {
-                echo '<div class="tab">';
-                echo '<a href="' . $link . '">' . $tab . '</a></div>';
+                echo '<span class="tab">';
+                echo '<a href="' . $link . '">' . $tab . '</a></span>';
             }
         ?>
   </div>
-  <div class="side">
-    <img src="cropped.jpg" class="sidebar" />
-  </div>
-  <div id="buffer">
+  <div id="container">
+  <div id="side">
+    <img src="cropped.jpg" id="sidebar" />
   </div>
 <?php
   include("dbinfo.inc.php");
@@ -64,5 +63,6 @@
     }
   }
 ?>
+  </div>
 </body>
 </html>
