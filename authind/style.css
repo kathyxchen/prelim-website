@@ -26,11 +26,11 @@ ul {
   font-family: "Trebuchet MS";
 }
 
-.side {
+#side {
   float: left;
 }
 
-.sidebar {
+#sidebar {
   height: 100%;
 }
 
@@ -38,11 +38,20 @@ ul {
   float: right;
 } 
 
+#container {
+  position: relative;
+}
+
+#authindex {
+  float: left;
+  width: 50%;
+}
+
 .auth {
-  margin-left: 50px;
+  margin-left: 10%;
   float: left;
   background-color: white;
-  width: 50%;
+  width: 80%;
   overflow: hidden; 
 }
 

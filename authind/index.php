@@ -18,12 +18,13 @@
             }
         ?>
     </div>
-    <div class="side">
-        <img src="../cropped.jpg" class="sidebar" />
+    <div id="container">
+    <div id="side">
+        <img src="../cropped.jpg" id="sidebar" />
     </div>
     <div id="buffer">
     </div>
-    <div id="container">
+    <div id="authindex">
       <h2><br />The Authors</h2>
       <div id="index">
       <?php
@@ -46,6 +47,7 @@
           $ts = strtotime($d);
           return date("F d, Y", $ts);
         }
+
         function match_title($ia, $mysqli) {
           $query = "SELECT title, post_time, ID FROM articles WHERE author_id=" . $ia . " ORDER BY post_time DESC";
           if ($stmt = $mysqli->prepare($query)) {
@@ -72,6 +74,7 @@
         }
       ?>
       </div>
+    </div>
     </div>
 </body>
 </html>

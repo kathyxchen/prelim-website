@@ -18,8 +18,8 @@
             }
       ?>
     </div>
-    <div class="side">
-        <img src="../cropped.jpg" class="sidebar" />
+    <div id="side">
+        <img src="../cropped.jpg" id="sidebar" />
     </div>
     <div id="buffer">
     </div>
@@ -94,22 +94,22 @@
     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <p>Title: </p>
         <p>
-        <input type="text" name="title" value="" size="50" maxlength="255" />
+        <input type="text" name="title" value="" size="45%" maxlength="255" />
         </p> 
 
         <p>Name: </p>
         <p>
-        <input type="text" name="author" value="" size="50" maxlength="255" />
+        <input type="text" name="author" value="" size="45%" maxlength="255" />
         </p>
 
         <p>E-mail: </p>
         <p>
-        <input type="email" name="email" value="" size="50" maxlength="255" />
+        <input type="email" name="email" value="" size="45%" maxlength="255" />
         </p>
         
         <p>Entry: </p>
         <p>
-        <textarea name="body" rows="15" cols="35"></textarea>
+        <textarea name="body" rows="15%" cols=33%"></textarea>
         </p>
         <input type="submit" name="submit" value="Submit" />
     </form>

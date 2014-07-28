@@ -1,8 +1,8 @@
-.side {
+#side {
   float: left;
 }
 
-.sidebar {
+#sidebar {
   height: 100%;
 }
 
@@ -11,30 +11,16 @@
   padding: 20px;
 } 
 
-form {
-  position: relative;
-  margin-top: 30px;
-}
-
-body {
+#entry {
   font-family: "Trebuchet MS";
   font-size: 80%;
   font-weight: bold;
-}
-
-#entry {
   float: left;
 }
 
 #post { 
   margin-top: 60px;
   padding-top: 20px;
-}
-
-.tab {
-    font-family: "Georgia";
-    font-weight: normal;
-    font-size: 120%;
 }
 
 a:link, a:visited {
