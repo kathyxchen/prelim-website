@@ -9,6 +9,7 @@
         <?php
             $menu = array(
             'HOME'=>'../', 
+            "POSTS"=>'../#posts-container',
             'SUBMISSION'=>'../submit',
             "AUTHOR'S INDEX"=>'');
             foreach ($menu as $tab => $link) {
