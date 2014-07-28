@@ -69,6 +69,7 @@ h2, .author, .body {
   background-color: white;
   height: 260px;
   width: 270px;
+  vertical-align: bottom;
 }
 
 .whole {
