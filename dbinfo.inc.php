@@ -1,6 +1,6 @@
 <?php
 $username="root";
-$password="test54321";
+$password="";
 $database="kathy_blog";
 $host="localhost";
 ?>
