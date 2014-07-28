@@ -21,6 +21,16 @@ ul {
   margin-top: 0px;
 }
 
+.auth {
+  margin-top: 10px;
+  font-family: "Georgia";
+}
+
+.title {
+  font-size: 80%;
+  font-family: "Trebuchet MS";
+}
+
 .side {
   float: left;
 }
@@ -67,3 +77,19 @@ a:link, a:visited {
   color: #6699CC;
 }
 
+a:hover {
+  color: #C3E4ED;
+}
+
+.mail {
+  color: gray;
+  font-size: 80%;
+}
+
+a.mlink:link, a.mlink:visited {
+  color: gray;
+}
+
+a.mlink:hover {
+  color: #6699CC;
+}
