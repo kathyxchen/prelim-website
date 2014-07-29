@@ -1,9 +1,17 @@
+#container {
+  position: absolute;
+  height: auto;
+  width: 100%;
+}
+
 #side {
   float: left;
+  width: 20%;
 }
 
 #sidebar {
   height: 100%;
+  width: 100%;
 }
 
 #buffer {

@@ -28,10 +28,12 @@ ul {
 
 #side {
   float: left;
+  width: 20%;
 }
 
 #sidebar {
   height: 100%;
+  width: 100%;
 }
 
 #buffer {
@@ -39,7 +41,9 @@ ul {
 } 
 
 #container {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
 
 #authindex {

@@ -18,6 +18,8 @@
             }
       ?>
     </div>
+
+    <div id="container">
     <div id="side">
         <img src="../cropped.jpg" id="sidebar" />
     </div>
@@ -113,6 +115,7 @@
         </p>
         <input type="submit" name="submit" value="Submit" />
     </form>
+    </div>
     </div>
 </body>
 </html>
