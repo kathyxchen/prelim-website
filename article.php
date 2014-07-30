@@ -1,7 +1,9 @@
 <html> 
 <head>
-<link rel="stylesheet" href="article.css"/>
-<link rel="stylesheet" href="general.css"/>
+<link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="stylesheets/zoom.css"/>
+<link rel="stylesheet" href="stylesheets/article.css"/>
+<link rel="stylesheet" href="stylesheets/general.css"/>
 </head>
 <body>
   
@@ -16,11 +18,14 @@
                 echo '<span class="tab">';
                 echo '<a href="' . $link . '">' . $tab . '</a></span>';
             }
-        ?>
+    ?>
+    <div class="zoombtn">
+      <i id="arrows" class="fa fa-arrows-alt fa-2x"></i>
+    </div>
   </div>
   <div id="container">
   <div id="side">
-    <img src="cropped.jpg" id="sidebar" />
+    <img src="images/cropped.jpg" id="sidebar" />
   </div>
 <?php
   include("dbinfo.inc.php");
@@ -64,5 +69,7 @@
   }
 ?>
   </div>
+  <script type="text/javascript" src="vendors/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/layout.js"></script>
 </body>
 </html>

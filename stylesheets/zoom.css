@@ -1,0 +1,12 @@
+body.increase {
+	zoom: 1.2;
+}
+
+.zoombtn {
+	position: absolute;
+	float: right;
+	padding: 5px;
+	right: 0px;
+	top: 0px;
+	color: gray;
+}

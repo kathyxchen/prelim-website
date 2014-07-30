@@ -1,0 +1,67 @@
+body {
+  width: 100%;
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 120%;
+  color: #6699CC;
+}
+
+#container {
+  position: absolute;
+  height: auto;
+  width: 100%;
+}
+
+#side {
+  float: left;
+  width: 20%;
+}
+
+#sidebar {
+  height: 100%;
+  width: 100%;
+}
+
+.post {
+  position: relative;
+  top: 80px;
+  left: 5%;
+  float: left;
+  background-color: white;
+  width: 40%;
+  overflow: hidden; 
+}
+
+.author, .body {
+  margin-bottom: 5px;
+}
+
+.author {
+  color: gray;
+  font-style: italic;
+  font-size: 90%
+}
+
+.body {
+  font-family: "Trebuchet MS";
+  font-size: 80%;
+}
+
+.tm {
+  font-family: "Georgia";
+  font-size: 70%;
+  color: gray;
+  font-style: italic;
+}
+
+a:link, a:visited {
+  color: #6699CC;
+}
+
+a.mlink:link, a.mlink:visited {
+  color: gray;
+}
